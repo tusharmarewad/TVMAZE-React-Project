@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/TVMAZE-React-Project/static/css/main.74cb1658.css",
+    "main.js": "/TVMAZE-React-Project/static/js/main.c4194f74.js",
+    "index.html": "/TVMAZE-React-Project/index.html",
+    "main.74cb1658.css.map": "/TVMAZE-React-Project/static/css/main.74cb1658.css.map",
+    "main.c4194f74.js.map": "/TVMAZE-React-Project/static/js/main.c4194f74.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.74cb1658.css",
+    "static/js/main.c4194f74.js"
+  ]
+}
