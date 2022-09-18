@@ -8,16 +8,20 @@
   padding: 10px 20px;
   background-color: rgb(37, 33, 39);
 }
-
+.radioName{
+  font-size: 30px;
+}
 input[type="radio"] {
   width: 20px;
   height: 1.5em;
 }
 
 body {
-  width: 100%;
+  width: auto;
   height: 100vh;
   background-image: url("https://c4.wallpaperflare.com/wallpaper/460/140/13/sci-fi-futuristic-city-dark-theme-fantasy-wallpaper-preview.jpg");
+  margin: 0;
+  padding: 0;
 }
 
 .main-container {
@@ -75,4 +79,48 @@ body {
 .sub-container:hover {
   background: linear-gradient(0deg, rgb(15, 9, 9), rgb(133, 224, 236));
   transform: scale(1.1);
+}
+
+@media screen and (max-width:600px) {
+    body {
+      width: auto;
+      height: 100vh;
+      background-image: url("https://c4.wallpaperflare.com/wallpaper/460/140/13/sci-fi-futuristic-city-dark-theme-fantasy-wallpaper-preview.jpg");
+    }
+
+    .input {
+      width: 300px;
+      height: 20px;
+      font-size: medium;
+    }
+
+    .navImg{
+      width: 150px;
+      height: 50px;
+    }
+    input[type="radio"] {
+        width: 15px;
+        height: 0.8em;
+    }
+    .radioName {
+      font-size: 18px;
+    }
+    .main-container {
+      margin-top: 30px;
+    }
+    .container {
+      margin-top: 30px;
+    }
+    .sub-container {    
+        margin: 10px;       
+        width: 200px;      
+    }
+    .inner-container {      
+      width: 200px;
+    }
+
+    .img {
+      width: 190px;
+      height: 250px;
+    }
 }

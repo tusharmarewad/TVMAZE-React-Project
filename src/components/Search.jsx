@@ -20,10 +20,10 @@ function Search() {
             <div>
                 <div className="search">
                     <input type="radio" name="radio" onChange={actor} />
-                    <b style={{ fontSize: "30px" }}>&nbsp;Search Actor</b>
+                    <b className="radioName">&nbsp;Search Actor</b>
                     &nbsp; &nbsp; &nbsp;
                     <input type="radio" name="radio" onChange={show} />
-                    <b style={{ fontSize: "30px" }}>&nbsp;Search Show</b>
+                    <b className="radioName">&nbsp;Search Show</b>
                 </div>
             </div>
             {searchActor ? <ActorsContent /> : null}

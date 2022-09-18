@@ -6,6 +6,7 @@ function Navbar() {
             <img
                 src="https://static.tvmaze.com/images/tvm-header-logo.png"
                 alt="img"
+                className="navImg"
             />
         </div>
     );
