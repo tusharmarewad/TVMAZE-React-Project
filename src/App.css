@@ -6,6 +6,7 @@
 .navbar {
   display: flex;
   padding: 10px 20px;
+  background-color: rgb(37, 33, 39);
 }
 
 input[type="radio"] {
@@ -69,4 +70,9 @@ body {
   width: 290px;
   height: 325px;
   border-radius: 10px;
+}
+
+.sub-container:hover {
+  background: linear-gradient(0deg, rgb(15, 9, 9), rgb(133, 224, 236));
+  transform: scale(1.1);
 }
