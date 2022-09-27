@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-
+import React, { useState } from "react";
+import myImage from '../Photo/actor.jpg'
 function ActorsContent() {
     const [value, setValue] = useState("");
     const [data, setData] = useState([]);
@@ -9,31 +9,35 @@ function ActorsContent() {
     }
 
     let urlData = "";
+ 
+    function submit(e) {
+        e.preventDefault();
+        if (value.length > 0) {
+            urlData = `https://api.tvmaze.com/search/people?q=${value}`;
+        }
 
-    if (value.length > 0) {
-        urlData = `https://api.tvmaze.com/search/people?q=${value}`;
-    }
-
-    async function getData() {
-        const res = await fetch(urlData);
-        const response = await res.json();
-        setData(response);
-    }
-
-    useEffect(() => {
+        async function getData() {
+            const res = await fetch(urlData);
+            const response = await res.json();
+            setData(response);
+        }
         getData();
-    });
+    }
+    
 
     return (
         <div className="main-container">
             <div>
+                <form onSubmit={submit}>
                 <input
                     type="text"
                     className="input"
                     value={value}
                     placeholder="enter actor name..."
                     onChange={handleChange}
-                />
+                />&nbsp;
+                    <input type="submit" className="button" value="Search" />
+                </form>
             </div>
             <div className="container">
                 {data.map((name, index) => {
@@ -54,7 +58,8 @@ function ActorsContent() {
                                     ) : (
                                         <div>
                                             <img
-                                                src="https://wellbeingchirony.com/wp-content/uploads/2021/03/Deafult-Profile-Pitcher.png"
+                                                //src="https://wellbeingchirony.com/wp-content/uploads/2021/03/Deafult-Profile-Pitcher.png"
+                                                    src={myImage}
                                                 className="img"
                                                 alt="Not Found"
                                             />

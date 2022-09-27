@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 function MoviesContent() {
     const [value, setValue] = useState("");
@@ -10,30 +10,32 @@ function MoviesContent() {
 
     let urlData = "";
 
-    if (value.length > 0) {
-        urlData = `https://api.tvmaze.com/search/shows?q=${value}`;
-    }
-
-    async function getData() {
-        const res = await fetch(urlData);
-        const response = await res.json();
-        setData(response);
-    }
-
-    useEffect(() => {
+    function submit(e){
+        e.preventDefault();
+        if (value.length > 0) {
+            urlData = `https://api.tvmaze.com/search/shows?q=${value}`;
+        }
+        async function getData() {
+            const res = await fetch(urlData);
+            const response = await res.json();
+            setData(response);
+        }
         getData();
-    });
+    }
 
     return (
         <div className="main-container">
             <div>
+                <form onSubmit={submit}>
                 <input
                     type="text"
                     value={value}
                     className="input"
                     placeholder="enter show name..."
                     onChange={handleChange}
-                />
+                />&nbsp;
+                <input type="submit" className="button" value="Search" />
+                </form>
             </div>
             <div className="container">
                 {data.map((name, index) => {

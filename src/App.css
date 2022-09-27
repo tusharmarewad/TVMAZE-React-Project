@@ -7,6 +7,7 @@
   display: flex;
   padding: 10px 20px;
   background-color: rgb(37, 33, 39);
+  justify-content: space-between;
 }
 .radioName{
   font-size: 30px;
@@ -18,12 +19,18 @@ input[type="radio"] {
 
 body {
   width: auto;
-  height: 100vh;
-  background-image: url("https://c4.wallpaperflare.com/wallpaper/460/140/13/sci-fi-futuristic-city-dark-theme-fantasy-wallpaper-preview.jpg");
+  height: 100vh; 
+  background-image: url("./Photo/show.png");
   margin: 0;
   padding: 0;
 }
-
+.button{
+  background-color:rgb(122, 177, 190);
+  color: black;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: large;
+}
 .main-container {
   margin-top: 50px;
 }

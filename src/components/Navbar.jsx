@@ -8,6 +8,7 @@ function Navbar() {
                 alt="img"
                 className="navImg"
             />
+            <h1 style={{color:"white"}}>Review The Shows</h1>
         </div>
     );
 }
